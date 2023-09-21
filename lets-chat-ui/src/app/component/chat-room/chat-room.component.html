@@ -1,0 +1,41 @@
+<div class="row component-style">
+    <div class="col-md-4">
+        <p class="header-text">Username</p>
+        <input type="text" id="username" [(ngModel)]="userName" placeholder="Enter username">
+    </div>
+    <div class="col-md-4">
+        <p class="header-text">Select a room</p>
+        <select class="input-select" name="rooms" id="rooms"  [(ngModel)]="room">
+            <option value="lobby" selected>Lobby</option>
+            <option value="hall">Hall</option>
+            <option value="gta">GTA chat room</option>
+            <option value="pubg">Pubg chat room</option>
+          </select>
+    </div>
+    <div class="col-md-4">
+        <button class="btn join-btn" (click)="joinRoom()">Join</button>
+        <button class="btn leave-btn" (click)="leaveRoom()">Leave</button>
+    </div>
+</div>
+<div class="row component-style">
+    <div class="col-md-12">
+        <div class="message-display" >
+            <div *ngFor="let chatMessage of chatMessageArray">
+                <div [ngClass]="{'right-align': chatMessage.user === this.userName }">
+                    <span><strong>{{chatMessage.user}} : </strong> {{chatMessage.message}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row component-style">
+    <div class="col-md-9">
+        <div>
+            <input class="input-textbox" type="text" [(ngModel)]="messageTextToSend">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <button class="btn send-btn" (click)="sendMessage()">Send</button>
+    </div>
+</div>

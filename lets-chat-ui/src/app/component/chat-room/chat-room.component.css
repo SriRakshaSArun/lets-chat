@@ -1,0 +1,37 @@
+.header-text{
+    font-weight: 500;
+    margin: 0;
+}
+.input-select{
+    width: 50%;
+}
+.join-btn{
+    color: white;
+    background-color: #0156A1;
+    margin-top: 3vh;
+}
+.leave-btn{
+    color: white;
+    background-color: red;
+    margin-left: 1vw;
+    margin-top: 3vh;
+    width: 7.5vw;
+}
+.message-display{
+    height: 50vh;
+    width: 77vw;
+    border: 1px solid black;
+    background-color: rgb(243, 242, 242);
+}
+.input-textbox{
+    width: 100%;
+}
+.send-btn{
+    color: white;
+    background-color: #0156A1;
+    width: 9vw;
+}
+.right-align{
+    text-align: right;
+    margin-right: 1vw;
+}
